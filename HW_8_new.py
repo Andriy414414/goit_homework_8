@@ -24,9 +24,6 @@ def get_birthdays_per_week(users):
     
     end_date = current_date + timedelta(weeks=1)
 
-    print(current_date)
-    print(end_date)
-
     list_for_wishes = defaultdict(list)
 
     for user in users:
@@ -39,10 +36,8 @@ def get_birthdays_per_week(users):
                 birthday_date += timedelta(days=(8 - birthday_date.isoweekday()))
             
             list_for_wishes[birthday_date].append(user['name'])
-                      
-
+            
     list_for_wishes_sort = dict(sorted(list_for_wishes.items()))
-    print(list_for_wishes_sort)
 
     for key,val in list_for_wishes_sort.items():
         day = key.strftime('%A') 
