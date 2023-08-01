@@ -33,7 +33,7 @@ def get_birthdays_per_week(users):
         formatted_birthday = birthday_date.strftime("%Y-%m-%d")
         greetings[user["name"]] = formatted_birthday
 
-    # print(greetings)
+    print(greetings)
 
     next_week_dates = [
         datetime.now() + timedelta(days=i) for i in range(8)
